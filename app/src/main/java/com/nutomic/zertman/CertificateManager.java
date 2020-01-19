@@ -127,11 +127,10 @@ public class CertificateManager {
 
 	/**
 	 * Runs the given command as root and logs any errors.
-	 *
-	 * @param command The command to execute.
-	 * @return True on success.
+	 * @param command  The command to execute.
+	 * @return  True on success.
 	 */
-	private boolean run(String command) {
+	private static boolean run(String command) {
 		List<String> result = Shell.SU.run(command);
 		if (result == null) {
 			Log.w(TAG, "Failed to execute root command: " + command);
